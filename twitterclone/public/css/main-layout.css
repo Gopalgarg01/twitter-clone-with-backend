@@ -1,0 +1,251 @@
+:root{
+    --blue: #0099ff;
+    --spacing: 10px;
+}
+*{
+    outline: none !important;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+nav a .blue{
+    color: var(--blue);
+}
+nav a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: rgb(193, 217, 232);
+    border-radius: 50%;
+    color: var(--blue);
+
+
+}
+
+.mainSectionContainer{
+    padding: 0;
+    display: flex;
+    
+    flex-direction: column;
+    border-left: 3px solid rgb(247, 241, 241);
+    border-right: 3px solid rgb(247, 241, 241);
+}
+.mainSectionContainer h1{
+    font-size: 30px;
+    font-weight: 100px;
+}
+.titleContainer{
+    display: flex;
+   
+    border-bottom: 3px solid rgb(247, 241, 241);
+}
+
+.postFormContainer{
+    display: flex;
+    padding : var(--spacing);
+    border-bottom: 10px solid rgb(247, 241, 241);
+}
+.userImageContainer img{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+}
+
+.textareaContainer{
+    flex: 1;
+    padding-left: var(--spacing);
+}
+.textareaContainer textarea{
+    border: none;
+    resize: none;
+    font-size: 14px;
+    
+}
+.buttonsContainer button{
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
+    cursor: pointer; 
+    border-bottom: 1px solid rgb(247, 241, 241);
+}
+.mainContentContainer{
+    flex: 1;
+    display: flex;
+}
+.post a{
+    text-decoration: none;
+}
+.postContentContainer{
+    padding-left: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.username,.timestamp{
+    color:rgb(167, 159, 159);
+}
+
+.postFooter {
+    display: flex;  
+    align-items: center;     
+}
+
+.postFooter .postButtonContainer{
+    display: flex;
+    flex:1;      
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+button i, button span {
+    pointer-events: none;
+}
+
+.postFooter .postButtonContainer button{
+    padding: 0 10px;
+    color: #80808087;
+}
+.postButtonContainer button:hover{
+    background-color: rgb(222, 228, 240);
+    border-radius: 10px;
+    color: var(--blue);
+}
+
+.postButtonContainer button.red{
+    color: red;
+}
+
+.postButtonContainer button.green{
+    color: rgb(62, 198, 123);
+}
+.postActionContainer{
+    padding-left: 35px;
+    font-size: 13px;
+    color: grey;
+
+}
+.modal .postFormContainer{
+    border: none;
+    padding: 0;
+    padding-top: var(--spacing);
+}
+.post.largeFont .postedBody{
+    font-size: 25px;
+}
+
+.profileHeadContainer .coverPhotoContainer{
+    height: 180px;
+    background-color: var(--blue);
+}
+
+.profileHeadContainer .userImageContainer{
+    height: 100px;
+    width: 128px;
+    margin-left: var(--spacing);
+    position: absolute;
+    bottom: 420px;
+}
+
+.profileHeadContainer .userImageContainer img{
+    height: 106px;
+    width: 106px;
+    border: 1px solid white;
+}
+
+.profileHeadContainer .profileButtonContainer {
+    text-align: right;
+    padding: var(--spacing);
+    min-height: 66px;        
+}
+
+.profileButton ,
+.followButton{
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 60px;
+    display: inline;
+    margin-right: 10px;
+}
+
+.profileButton:hover ,
+.followButton:hover{
+    background-color: var(--blue);
+    color: white;
+}
+
+.followbutton.following{
+    background-color: var(--blue);
+    color: #0099ff
+}
+.profileHeadContainer .userDetailsContainer{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profileHeadContainer .userDetailsContainer .followingContainer a{
+    text-decoration: none;
+    color: black;
+}
+.followingContainer .value{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.followingContainer span:not(.value){
+    color: grey;
+}
+.tabsContainer{    
+    display: flex;
+    border-bottom: 1px solid rgb(229, 222, 222);
+    flex-shrink: 0;
+}
+.tabsContainer a{
+    text-decoration: none;
+    color: black;
+}
+.tab{
+    flex: 1;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-weight: bold;
+}
+
+.tab.active{
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.tab:hover{
+    color: white;
+    background-color: var(--blue);
+}

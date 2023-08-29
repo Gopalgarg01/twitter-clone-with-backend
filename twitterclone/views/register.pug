@@ -1,0 +1,42 @@
+extends layouts/login-layout.pug
+
+
+block content 
+    .loginContainer 
+        h1 Register 
+        
+        form#registerform(method= "post" onsubmit="event.preventDefault(); validateform();")
+
+            p.errorMessage #{errorMessage}
+            
+            //- input(type ="text", name ="firstname", placeholder="firstname" ,  required="")
+            //- input(type ="text", name ="lastname", placeholder="lastname" , required="")
+            //- input(type ="text", name ="username", placeholder="username" , required="")
+            //- input(type ="email", name ="email", placeholder=" email" , required="")
+            //- input#password(type ="password", name ="password", placeholder="password" , required="")
+            //- input#passwordconf(type ="password", name ="passwordconfirm", placeholder="confirm password" ,required="")       
+
+
+            input(type ="text", name ="firstname", placeholder="firstname" , value=firstname required="")
+            input(type ="text", name ="lastname", placeholder="lastname" ,value=lastname required="")
+            input(type ="text", name ="username", placeholder="username" ,value=username required="")
+            input(type ="email", name ="email", placeholder=" email" , value=email required="")
+            input#password(type ="password", name ="password", placeholder="password" , required="")
+            input#passwordconf(type ="password", name ="passwordconfirm", placeholder="confirm password" ,required="")  
+
+          
+            input(type ="submit", value="Register")
+        a(href="/login") Already have an account? Login here
+    script.
+        var password1st = document.getElementById("password");
+        var password2nd = document.getElementById("passwordconf");
+        var form =document.getElementById("registerform");
+
+        function validateform(){
+            if(password1st.value  != password2nd.value){
+                alert("password do not match try again");
+            }else{
+                form.submit();
+            }
+
+        } 

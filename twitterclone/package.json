@@ -1,0 +1,22 @@
+{
+  "name": "twitterclone",
+  "version": "1.0.0",
+  "description": "this is a twitter clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Gopal Garg",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
+    "pug": "^3.0.2",
+    "session": "^0.1.0"
+  }
+}
